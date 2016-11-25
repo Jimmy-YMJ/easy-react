@@ -5,6 +5,7 @@ const JSONStore = require('jsonstore-js');
 const History = require('./History');
 
 function EasyReact(options) {
+  this.isBrowserContext = typeof window !== 'undefined';
   this.view = null;
 
   this.store = new JSONStore({
@@ -15,13 +16,13 @@ function EasyReact(options) {
     strict: options.strict !== false
   });
 
-  this.reInitStore = options.reInitStore || false;
+  this.reInitStore = !this.isBrowserContext;
 
   this.router.createMismatch(function () {
     this.view = null;
   }.bind(this));
 
-  if(typeof window !== 'undefined'){
+  if(this.isBrowserContext){
     this.history = new History({
       onHistoryChange: this._onHistoryChange.bind(this),
       historyType: options.historyType
