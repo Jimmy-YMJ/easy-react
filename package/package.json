@@ -1,0 +1,30 @@
+{
+  "name": "easy-react",
+  "version": "1.0.0",
+  "description": "A combination of store and router to make react app easy.",
+  "main": "index.js",
+  "contributors": [
+    {
+      "name": "Jimmy-YMJ",
+      "email": "ddmingmingyang@gmail.com"
+    }
+  ],
+  "repository": {
+    "type": "git"
+  },
+  "keywords": [
+    "react app",
+    "simgle page app",
+    "react router",
+    "react store"
+  ],
+  "author": "Jimmy-YMJ",
+  "license": "MIT",
+  "dependencies": {
+    "jsonstore-js": "^1.1.3",
+    "mini-routerjs": "^1.1.1",
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2",
+    "simple-url": "^1.1.4"
+  }
+}
