@@ -64,15 +64,20 @@ gulp.task('bundle-min', ['lib'], function (cb) {
   bundleMin('./build/modules/easy-react.js', 'easyReact', './build/easy-react.min.js', cb);
 });
 
-gulp.task('release', ['bundle', 'bundle-min'], function () {
-  gulp.src([
+gulp.task('release', ['package-copy'], function () {
+  var pkg = fs.readFileSync('./package/package.json').toString(),
+    version = require('./package.json').version;
+  fs.writeFileSync('./build/package/package.json', pkg.replace(/("version":\s*)(?:.*?),/, `$1"${version}",`));
+});
+
+gulp.task('package-copy', ['bundle', 'bundle-min'], function () {
+  return gulp.src([
     './build/modules/**',
     '!./build/modules/easy-react.js',
-    './package.json',
-    './README.md',
     './LICENSE'])
     .pipe(gulp.dest('./build/package'));
 });
+
 
 gulp.task('publish', function (cb) {
   const publish = spawn('npm', ['publish'], {cwd: './build/package', stdio: 'inherit'});
