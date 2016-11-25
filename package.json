@@ -1,0 +1,56 @@
+{
+  "name": "easy-react",
+  "version": "1.0.0",
+  "description": "A combination of store and router to make react app easy.",
+  "main": "index.js",
+  "contributors": [
+    {
+      "name": "Jimmy-YMJ",
+      "email": "ddmingmingyang@gmail.com"
+    }
+  ],
+  "scripts": {
+    "release": "gulp release",
+    "build": "gulp"
+  },
+  "repository": {
+    "type": "git"
+  },
+  "browserify": {
+    "transform": [
+      "browserify-shim"
+    ]
+  },
+  "browserify-shim": {
+    "react": "global:React",
+    "react-dom": "global:ReactDOM",
+    "react-dom/server": "global:ReactDOMServer"
+  },
+  "keywords": [
+    "react app",
+    "simgle page app",
+    "react router",
+    "react store"
+  ],
+  "author": "Jimmy-YMJ",
+  "license": "MIT",
+  "dependencies": {
+    "jsonstore-js": "^1.1.3",
+    "mini-routerjs": "^1.1.1",
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2",
+    "simple-url": "^1.1.4"
+  },
+  "devDependencies": {
+    "babel-preset-es2015": "^6.16.0",
+    "babel-preset-react": "^6.16.0",
+    "browserify": "^13.1.0",
+    "browserify-shim": "^3.8.12",
+    "del": "^2.2.2",
+    "derequire": "^2.0.3",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-eslint": "^3.0.1",
+    "uglify-js": "^2.7.3"
+  }
+}
