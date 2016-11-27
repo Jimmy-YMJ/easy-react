@@ -74,6 +74,7 @@ gulp.task('package-copy', ['bundle', 'bundle-min'], function () {
   return gulp.src([
     './build/modules/**',
     '!./build/modules/easy-react.js',
+    './README.md',
     './LICENSE'])
     .pipe(gulp.dest('./build/package'));
 });
