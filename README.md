@@ -6,6 +6,28 @@
 
 It is also light weight, the size of minified [bundle](https://github.com/Jimmy-YMJ/easy-react/blob/master/build/easy-react.min.js) is less than 25k.
 
+## Installing
+Use via npm:
+```bash
+$ npm install easy-react --save
+```
+```javascript
+const EasyReact = require('easy-react');
+const Provider = require('easy-react/Provider');
+
+// Use es6 import
+import EasyReact from 'easy-react';
+import Provider from 'easy-react/Provider';
+
+```
+Use in browser:
+
+Scripts for browser is under [build](https://github.com/Jimmy-YMJ/easy-react/tree/master/build) directory, use `easy-react.js` for development environment(contains inline source maps), use `easy-react.min.js` for production.
+The reference in browser is `window.EasyReact`, make sure `window.React`, `window.ReactDOM` and `window.ReactDOMServer` are available before using these bundles.
+
+It is recommended to build your own bundles using **easy-react** package.
+
+
 ## Conventions
 
 `EasyReact` is the main class of **easy-react** package, and `app` is an instance of `EasyReact`.
