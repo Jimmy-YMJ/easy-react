@@ -57,11 +57,11 @@ gulp.task('lib', ['clean', 'eslint'], function () {
 });
 
 gulp.task('bundle', ['lib'], function (cb) {
-  bundle('./build/modules/easy-react.js', 'easyReact', './build/easy-react.js', cb);
+  bundle('./build/modules/easy-react.js', 'EasyReact', './build/easy-react.js', cb);
 });
 
 gulp.task('bundle-min', ['lib'], function (cb) {
-  bundleMin('./build/modules/easy-react.js', 'easyReact', './build/easy-react.min.js', cb);
+  bundleMin('./build/modules/easy-react.js', 'EasyReact', './build/easy-react.min.js', cb);
 });
 
 gulp.task('release', ['package-copy'], function () {
