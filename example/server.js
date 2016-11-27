@@ -12,7 +12,7 @@ app.get('/', function (req, res) {
 
 app.get('/users/:userId', function (req, res) {
   var page = reactApp.getView(req.path, true);
-  res.send(page);
+  res.send(getPage(page));
 });
 
 app.listen(5000, function () {
