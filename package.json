@@ -1,6 +1,6 @@
 {
   "name": "easy-react",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A combination of store and router to make react app easy.",
   "main": "index.js",
   "contributors": [
