@@ -52,9 +52,9 @@ EasyReact.prototype = {
       this.view = callback(this.store.get()) || null;
     }.bind(this));
   },
-  getView: function (path, stringify) {
+  getView: function (path, stringify, staticMarkup) {
     this.router.match(path);
-    return stringify === true ? ReactDOMServer.renderToString(this.view) : this.view;
+    return stringify === true ? (staticMarkup === true ? ReactDOMServer.renderToStaticMarkup(this.view) : ReactDOMServer.renderToString(this.view)) : this.view;
   },
   updateStore: function (name, action, a, b, c, d, e, f) {
     return this.store.do(name, action, a, b, c, d, e, f);
@@ -76,7 +76,7 @@ EasyReact.prototype = {
     this._mountView(view);
     return result;
   },
-  getStore: function(path, copy){
+  get: function(path, copy){
     return this.store.get(path, copy);
   }
 };
