@@ -1,6 +1,6 @@
 {
   "name": "easy-react",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A combination of store and router to make react app easy.",
   "main": "index.js",
   "contributors": [
@@ -14,7 +14,8 @@
     "build": "gulp"
   },
   "repository": {
-    "type": "git"
+    "type": "git",
+    "url": "https://github.com/Jimmy-YMJ/easy-react"
   },
   "browserify": {
     "transform": [
